@@ -5,20 +5,34 @@ import Table from "@/components/Cards/Table";
 
 export default function Home() {
   return (
-    <>
-      <div className="grid gap-8 overflow-hidden">
-        <div className="grid grid-cols-2 gap-8">
+    <div className="grid grid-rows-2 gap-1 h-full w-full overflow-hidden">
+      {/* Top Row - General and Calendar */}
+      <div className="grid grid-cols-2 gap-1 overflow-hidden min-h-0">
+        {/* General Card */}
+        <div className="overflow-hidden min-h-0">
           <General />
-          <div className="grid gap-8">
+        </div>
+        
+        {/* Calendar Cards */}
+        <div className="grid grid-rows-2  gap-1 overflow-hidden min-h-0">
+          <div className="overflow-hidden min-h-0">
             <Calendar />
+          </div>
+          <div className="overflow-hidden min-h-0">
             <Calendar />
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-8">
+      </div>
+      
+      {/* Bottom Row - Line and Table */}
+      <div className="grid grid-cols-2 gap-1 overflow-hidden min-h-0">
+        <div className="overflow-hidden min-h-0">
           <Line />
+        </div>
+        <div className="overflow-hidden min-h-0">
           <Table />
         </div>
       </div>
-    </>
+    </div>
   );
 }

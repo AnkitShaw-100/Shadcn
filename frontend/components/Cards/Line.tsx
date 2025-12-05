@@ -61,13 +61,13 @@ const lineData = [
 
 export default function Line() {
   return (
-    <Card className="w-full h-full">
-      <CardHeader>
-        <CardTitle>Monthly Sales</CardTitle>
-        <CardDescription>Revenue trends by region</CardDescription>
+    <Card className="w-full h-full flex flex-col">
+      <CardHeader className="pb-2">
+        <CardTitle className="text-sm">Monthly Sales</CardTitle>
+        <CardDescription className="text-xs">Revenue trends by region</CardDescription>
       </CardHeader>
-      <CardContent className="pb-2">
-        <div className="h-[180px] w-full">
+      <CardContent className="pb-0 flex-1 overflow-hidden">
+        <div className="h-full w-full">
           <ResponsiveLine
             data={lineData}
             margin={{ top: 10, right: 70, bottom: 35, left: 40 }}

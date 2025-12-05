@@ -26,13 +26,13 @@ const transactions: Transaction[] = [
 
 export default function Table() {
   return (
-    <Card className="w-full h-full">
-      <CardHeader>
-        <CardTitle>Recent Transactions</CardTitle>
-        <CardDescription>Latest payment activities</CardDescription>
+    <Card className="w-full h-full flex flex-col">
+      <CardHeader className="pb-2">
+        <CardTitle className="text-sm">Recent Transactions</CardTitle>
+        <CardDescription className="text-xs">Latest activities</CardDescription>
       </CardHeader>
-      <CardContent className="pb-2">
-        <div className="overflow-auto max-h-[200px]">
+      <CardContent className="pb-0 flex-1 overflow-auto">
+        <div className="w-full h-full">
           <UITable>
             <TableHeader>
               <TableRow>

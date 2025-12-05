@@ -23,21 +23,21 @@ const calendarData = generateCalendarData();
 
 export default function Calendar() {
   return (
-    <Card className="w-full h-full">
-      <CardHeader>
-        <CardTitle>Activity Calendar</CardTitle>
-        <CardDescription>Daily activity overview for 2024</CardDescription>
-      </CardHeader>
-      <CardContent className="pb-2">
-        <div className="h-[120px] w-full">
+    <div className="w-full rounded-xl border shadow-sm h-full flex flex-col">
+      <div className="pb-1 pt-2 p-4">
+        <CardTitle className="text-sm">Activity Calendar</CardTitle>
+        <CardDescription className="text-xs">Daily activity overview for 2024</CardDescription>
+      </div>
+      {/* <CardContent className="pb-0 px-0 flex-1 overflow-hidden"> */}
+        <div className="h-full w-full p-2">
           <ResponsiveCalendar
             data={calendarData}
             from="2024-01-01"
             to="2024-12-31"
             emptyColor="#eeeeee"
             colors={["#61cdbb", "#97e3d5", "#e8c1a0", "#f47560"]}
-            margin={{ top: 10, right: 10, bottom: 10, left: 10 }}
-            yearSpacing={20}
+            margin={{ top: 5, right: 2, bottom: 2, left: 2 }}
+            yearSpacing={24}
             monthSpacing={2}
             monthBorderWidth={1}
             monthBorderColor="#ffffff"
@@ -49,21 +49,9 @@ export default function Calendar() {
                 <strong>{day.day}</strong>: {day.value || 0}
               </div>
             )}
-            legends={[
-              {
-                anchor: "bottom-right",
-                direction: "row",
-                translateY: 8,
-                itemCount: 4,
-                itemWidth: 32,
-                itemHeight: 16,
-                itemsSpacing: 8,
-                itemDirection: "right-to-left",
-              },
-            ]}
           />
         </div>
-      </CardContent>
-    </Card>
+      {/* </CardContent> */}
+     </div>
   );
 }

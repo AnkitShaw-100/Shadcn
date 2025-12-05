@@ -305,13 +305,13 @@ export default function General() {
 
   return (
     <>
-      <Card className="w-full">
-        <CardHeader>
-          <CardTitle>This Week</CardTitle>
-          <CardDescription>These are the results this week</CardDescription>
+      <Card className="w-full h-full flex flex-col">
+        <CardHeader className="pb-2">
+          <CardTitle className="text-sm">This Week</CardTitle>
+          <CardDescription className="text-xs">Ranking trends</CardDescription>
         </CardHeader>
-        <CardContent className="grid gap-4">
-          <div className="h-[400px] w-full">
+        <CardContent className="pb-0 flex-1 overflow-hidden">
+          <div className="h-full w-full">
             <MyBump data={data} />
           </div>
         </CardContent>
