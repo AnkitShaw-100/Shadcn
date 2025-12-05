@@ -4,7 +4,7 @@ import UserItem from "./UserItems";
 import { Command, CommandGroup, CommandItem, CommandList } from "@/components/ui/command";
 import type { ElementType } from "react";
 
-type MenuItem = { link: string; text: string; icon?: ElementType };
+type MenuItem = { link: string; text: string; icon: ElementType };
 type MenuGroup = { group: string; items: MenuItem[] };
 
 export default function Sidebar() {
@@ -38,12 +38,15 @@ export default function Sidebar() {
           <CommandList style={{ overflow: "visible" }}>
             {menuList.map((menu: MenuGroup, key: number) => (
               <CommandGroup key={key} heading={menu.group}>
-                {menu.items.map((option: MenuItem, optionKey: number) => (
-                  <CommandItem key={optionKey} className="flex gap-2 cursor-pointer">
-                    <option.icon className="w-4 h-4 " />
-                    {option.text}
-                  </CommandItem>
-                ))}
+                {menu.items.map((option: MenuItem, optionKey: number) => {
+                  const IconComponent = option.icon;
+                  return (
+                    <CommandItem key={optionKey} className="flex gap-2 cursor-pointer">
+                      <IconComponent className="w-4 h-4" />
+                      {option.text}
+                    </CommandItem>
+                  );
+                })}
               </CommandGroup>
             ))}
           </CommandList>

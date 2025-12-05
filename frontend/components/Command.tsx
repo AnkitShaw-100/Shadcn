@@ -5,7 +5,7 @@ import {Calculator, Calendar, CreditCard, Settings, Smile, User} from "lucide-re
 import {Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator, CommandShortcut} from "@/components/ui/command";
 
 export function CommandDemo() {
-  const [open, setOpen] = useState<boolean>(false);
+  const [open] = useState<boolean>(false);
   return (
     <Command className="rounded-lg border ">
       <CommandInput placeholder="Type a command or search..." />

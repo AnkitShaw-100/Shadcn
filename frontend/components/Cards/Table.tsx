@@ -1,19 +1,6 @@
 "use client";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-  CardDescription,
-} from "@/components/ui/card";
-import {
-  Table as UITable,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+import {Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
+import {Table as UITable, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 
 type Transaction = {
   id: string;

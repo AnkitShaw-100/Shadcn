@@ -1,5 +1,4 @@
 import General from "@/components/Cards/General";
-import { Card } from "@/components/ui/card";
 import Calendar from "@/components/Cards/Calendar";
 import Line from "@/components/Cards/Line"
 import Table from "@/components/Cards/Table"
@@ -16,8 +15,8 @@ export default function Home() {
           </div>
         </div>
         <div className="grid grid-cols-3 gap-[32px]">
-          <Line className="h-[300px]" />
-          <Table className="w-full" / >
+          <Line />
+          <Table  / >
         </div>
       </div>
     </>

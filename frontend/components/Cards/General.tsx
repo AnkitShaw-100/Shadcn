@@ -1,14 +1,13 @@
 "use client";
 import { ResponsiveBump } from "@nivo/bump";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-  CardDescription,
-} from "@/components/ui/card";
+import {Card, CardHeader, CardTitle, CardContent, CardDescription} from "@/components/ui/card";
 
-const MyBump = ({ data }: any) => {
+type BumpSerie = {
+  id: string;
+  data: { x: string; y: number }[];
+};
+
+const MyBump = ({ data }: { data: BumpSerie[] }) => {
   return (
     <ResponsiveBump
       data={data}

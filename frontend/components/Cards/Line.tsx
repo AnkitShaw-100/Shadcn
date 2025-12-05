@@ -1,12 +1,6 @@
 "use client";
 import { ResponsiveLine } from "@nivo/line";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-  CardDescription,
-} from "@/components/ui/card";
+import {Card, CardHeader, CardTitle, CardContent, CardDescription} from "@/components/ui/card";
 
 const lineData = [
   {
@@ -78,7 +72,13 @@ export default function Line() {
             data={lineData}
             margin={{ top: 10, right: 70, bottom: 35, left: 40 }}
             xScale={{ type: "point" }}
-            yScale={{ type: "linear", min: 0, max: "auto", stacked: false, reverse: false }}
+            yScale={{
+              type: "linear",
+              min: 0,
+              max: "auto",
+              stacked: false,
+              reverse: false,
+            }}
             curve="monotoneX"
             axisTop={null}
             axisRight={null}

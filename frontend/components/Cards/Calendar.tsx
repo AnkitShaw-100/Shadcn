@@ -1,21 +1,15 @@
 "use client";
 import { ResponsiveCalendar } from "@nivo/calendar";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-  CardDescription,
-} from "@/components/ui/card";
+import {Card, CardHeader, CardTitle, CardContent, CardDescription} from "@/components/ui/card";
 
 // Generate daily data for 2024
 const generateCalendarData = () => {
   const data = [];
   const startDate = new Date("2024-01-01");
   const endDate = new Date("2024-12-31");
-  
+
   for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
-    const dateStr = d.toISOString().split('T')[0];
+    const dateStr = d.toISOString().split("T")[0];
     // Generate random activity value (0-400) with some days having no activity
     const value = Math.random() > 0.2 ? Math.floor(Math.random() * 400) : 0;
     if (value > 0) {
