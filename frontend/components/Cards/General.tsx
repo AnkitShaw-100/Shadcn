@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardTitle,
   CardContent,
-  CardDescription
+  CardDescription,
 } from "@/components/ui/card";
 
 const MyBump = ({ data }: any) => {
@@ -312,9 +312,9 @@ export default function General() {
           <CardDescription>These are the results this week</CardDescription>
         </CardHeader>
         <CardContent className="grid gap-4">
-            <div className="h-[300px] w-full">
-    <MyBump data={data} />
-  </div>
+          <div className="h-[400px] w-full">
+            <MyBump data={data} />
+          </div>
         </CardContent>
       </Card>
     </>
