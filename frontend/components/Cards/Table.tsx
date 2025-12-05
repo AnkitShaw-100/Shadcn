@@ -8,22 +8,20 @@ type Transaction = {
   email: string;
   amount: number;
   status: "pending" | "completed" | "failed";
-  date: string;
   payment: string;
-  country: string;
 };
 
 const transactions: Transaction[] = [
-  { id: "TXN001", customer: "John Doe", email: "john@example.com", amount: 250.0, status: "completed", date: "2024-12-01", payment: "Credit Card", country: "USA" },
-  { id: "TXN002", customer: "Jane Smith", email: "jane@example.com", amount: 150.5, status: "completed", date: "2024-12-02", payment: "PayPal", country: "UK" },
-  { id: "TXN003", customer: "Bob Wilson", email: "bob@example.com", amount: 320.0, status: "pending", date: "2024-12-03", payment: "Bank Transfer", country: "Canada" },
-  { id: "TXN004", customer: "Alice Brown", email: "alice@example.com", amount: 89.99, status: "completed", date: "2024-12-03", payment: "Credit Card", country: "Australia" },
-  { id: "TXN005", customer: "Charlie Davis", email: "charlie@example.com", amount: 450.0, status: "failed", date: "2024-12-04", payment: "Debit Card", country: "USA" },
-  { id: "TXN006", customer: "Emma Watson", email: "emma@example.com", amount: 175.25, status: "completed", date: "2024-12-04", payment: "PayPal", country: "UK" },
-  { id: "TXN007", customer: "Michael Chen", email: "michael@example.com", amount: 520.0, status: "pending", date: "2024-12-05", payment: "Credit Card", country: "Singapore" },
-  { id: "TXN008", customer: "Sarah Johnson", email: "sarah@example.com", amount: 95.5, status: "completed", date: "2024-12-05", payment: "Bank Transfer", country: "USA" },
-  { id: "TXN009", customer: "David Martinez", email: "david@example.com", amount: 380.0, status: "completed", date: "2024-12-05", payment: "Credit Card", country: "Spain" },
-  { id: "TXN010", customer: "Lisa Anderson", email: "lisa@example.com", amount: 210.75, status: "failed", date: "2024-12-05", payment: "Debit Card", country: "Canada" },
+  { id: "TXN001", customer: "John Doe", email: "john@example.com", amount: 250.0, status: "completed", payment: "Credit Card" },
+  { id: "TXN002", customer: "Jane Smith", email: "jane@example.com", amount: 150.5, status: "completed", payment: "PayPal" },
+  { id: "TXN003", customer: "Bob Wilson", email: "bob@example.com", amount: 320.0, status: "pending", payment: "Bank Transfer" },
+  { id: "TXN004", customer: "Alice Brown", email: "alice@example.com", amount: 89.99, status: "completed", payment: "Credit Card" },
+  { id: "TXN005", customer: "Charlie Davis", email: "charlie@example.com", amount: 450.0, status: "failed", payment: "Debit Card" },
+  { id: "TXN006", customer: "Emma Watson", email: "emma@example.com", amount: 175.25, status: "completed", payment: "PayPal" },
+  { id: "TXN007", customer: "Michael Chen", email: "michael@example.com", amount: 520.0, status: "pending", payment: "Credit Card" },
+  { id: "TXN008", customer: "Sarah Johnson", email: "sarah@example.com", amount: 95.5, status: "completed", payment: "Bank Transfer" },
+  { id: "TXN009", customer: "David Martinez", email: "david@example.com", amount: 380.0, status: "completed", payment: "Credit Card" },
+  { id: "TXN010", customer: "Lisa Anderson", email: "lisa@example.com", amount: 210.75, status: "failed", payment: "Debit Card" },
 ];
 
 export default function Table() {
@@ -44,8 +42,6 @@ export default function Table() {
                 <TableHead>Amount</TableHead>
                 <TableHead>Status</TableHead>
                 <TableHead>Payment</TableHead>
-                <TableHead>Country</TableHead>
-                <TableHead>Date</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -69,8 +65,6 @@ export default function Table() {
                     </span>
                   </TableCell>
                   <TableCell>{transaction.payment}</TableCell>
-                  <TableCell>{transaction.country}</TableCell>
-                  <TableCell className="text-sm text-muted-foreground">{transaction.date}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
