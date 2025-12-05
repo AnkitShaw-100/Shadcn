@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "vercel-build": "npm ci --prefer-offline --no-audit && next build"
   },
   "dependencies": {
     "@nivo/bar": "^0.99.0",

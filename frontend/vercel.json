@@ -1,0 +1,8 @@
+{
+  "buildCommand": "npm ci --prefer-offline --no-audit && npm run build",
+  "env": {
+    "npm_config_fetch_retry_mintimeout": "5000",
+    "npm_config_fetch_retry_maxtimeout": "120000",
+    "npm_config_fetch_retries": "10"
+  }
+}
